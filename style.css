@@ -1,0 +1,549 @@
+:root {
+    --main-orange: #fe7d4e;
+    --black-text: #333333;
+    --brown-text: #543d32;
+    --gray-text: #707070;
+    --main-background: #fff7f3;
+    --light-background: #fefdf9;
+    --potter-background: rgb(254, 242, 242);
+    --shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+    font-family: nunito;
+    src: url(./../fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: nunito;
+    background-color: var(--main-background);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 4vw;
+}
+
+.logo {
+    font-size: 5vw;
+    margin: 0;
+    color: var(--main-orange);
+    font-weight: 800;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3vw;
+}
+
+span {
+    color: var(--black-text);
+}
+
+header>div>svg {
+    color: var(--black-text);
+    width: 6vw;
+}
+
+header>div>a {
+    text-decoration: none;
+    font-size: 2vw;
+    background-color: rgb(255, 236, 229);
+    color: var(--main-orange);
+    border-radius: 5vw;
+    padding: 1vw 5vw;
+    border: 1px solid rgb(255, 224, 212);
+    font-weight: 800;
+}
+
+label {
+    display: none;
+}
+
+.nav {
+    transform: translatey(-100vw);
+    color: black;
+    transition: 300ms ease-out;
+}
+
+.navi{
+    display: none;
+}
+
+.toggle-nav:checked+.nav {
+    transform: translateX(0);
+}
+
+.toggle-nav {
+    position: fixed;
+    top: 4vw;
+    right: 4vw;
+    width: 6vw;
+    height: 6vw;
+    z-index: 1;
+    opacity: 0;
+}
+
+.toggle-nav:hover {
+    cursor: pointer;
+}
+
+nav>li{
+    list-style: none;
+    text-align: right;
+    padding-right: 5vw;
+    font-size: 5vw;
+    font-weight: 500;
+    background-color: rgb(255, 236, 229);
+    border: 1px solid rgb(255, 224, 212);
+    border-bottom: 1px solid var(--gray-text);
+    width: 31vw;
+}
+
+nav>li>a{
+    text-decoration: none;
+    color: var(--black-text);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: -3vw;
+}
+
+nav>li:nth-of-type(1){
+    padding-top: 5vw;
+    clip-path: polygon(0 100%, 100% 100%, 100% 40%, 95% 40%, 80% 0, 65% 40%, 0 40%);
+}
+
+.hero {
+    background-image: url(./img/hero\ image.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+    padding: 15vw 12vw;
+    margin-top: -21.2vw;
+}
+
+.secondhand {
+    display: flex;
+    flex-direction: column;
+    color: var(--black-text);
+    margin: 3vw 10vw;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2vw;
+    margin-top: 4vw;
+}
+
+#secondhand-headline {
+    display: flex;
+    font-size: 3.5vw;
+    margin: 0;
+}
+
+.vis-flere {
+    display: flex;
+    font-weight: 800;
+}
+
+.arrow {
+    width: 3vw;
+}
+
+.vis-flere>a {
+    text-decoration: none;
+    color: var(--black-text);
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+.books {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5vw;
+
+}
+
+.books>a>img {
+    width: 35vw;
+    height: 54vw;
+    box-shadow: var(--shadow);
+}
+
+.harry-books {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-background);
+}
+
+.book-of-the-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10vw;
+}
+
+.book-of-the-month>p {
+    color: var(--gray-text);
+    margin: 0;
+    margin-top: 2vw;
+}
+
+.book-of-the-month>a {
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    margin: 0;
+    margin-top: 3.5vw;
+    font-weight: 800;
+}
+
+.book-of-the-month>h2 {
+    font-size: 4.5vw;
+    font-weight: 800;
+    margin: 0;
+    color: var(--black-text);
+}
+
+.harry-potter {
+    background-color: var(--potter-background);
+    display: flex;
+    padding: 10vw;
+}
+
+.harry-potter>img {
+    width: 35vw;
+    height: 54vw;
+    box-shadow: var(--shadow);
+    margin-right: 5vw;
+}
+
+.harry-text>h2 {
+    font-size: 4vw;
+    font-weight: 800;
+    color: var(--brown-text);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.gray-text {
+    color: rgb(180, 164, 160);
+    font-weight: 800;
+    font-size: 2.1vw;
+}
+
+.black-text{
+    font-weight: 800;
+    font-size: 2.3vw;
+    color: var(--black-text);
+}
+
+.harry-text{
+    font-size: 2.2vw;
+    color: var(--gray-text);
+}
+
+.harry-text>a{
+   display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    font-weight: 600;
+    background-color: var(--main-orange);
+    border-radius: 3vw;
+    padding: 1.5vw 6vw;
+    margin-top: 4vw;
+    margin-left: -1vw;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: var(--shadow);
+}
+
+.bookclub{
+    background-image: url(./img/Cover-Bogklub.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    height: 55vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookclub>a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 2.2vw;
+    font-weight: 600;
+    background-color: var(--main-orange);
+    border-radius: 3vw;
+    padding: 1.5vw 5vw;
+    margin-top: 25vw;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: var(--shadow);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-background);
+    font-size: 2.5vw;
+}
+
+footer>article{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 40vw;
+    margin: 10vw;
+    color: var(--black-text);
+}
+
+.logo2{
+    font-size: 3.3vw;
+    font-weight: 800;
+    margin: 3.5vw 0vw 0.5vw 0vw;
+    margin-top: ;
+}
+
+.logo2>span{
+    color: var(--main-orange);
+}
+
+footer>article>div>li{
+    list-style: none;
+}
+
+footer>article>div>h3{
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 3.5vw 0vw 0.5vw 0vw;
+}
+
+footer>article>div{
+    flex-grow: 1;
+    width: 40vw;
+}
+
+.icons>a>svg{
+    width: 8vw;
+    margin: 0;
+    fill: var(--main-orange);
+}
+
+.media{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width:720px){
+
+.toggle-nav{
+display: none;
+}
+
+.burger{
+    display: none;
+}
+
+header{
+    margin: 4vw 10vw 2vw 10vw;
+}
+
+.logo{
+    font-size: 2.5vw;
+}
+
+.navi{
+    display: flex;
+    gap: 1.5vw;
+}
+
+.navi>li{
+    list-style: none;
+}
+
+.navi>li>a{
+    text-decoration: none;
+    color: var(--black-text);
+    font-weight: 800;
+}
+
+header>div>a {
+    font-size: 1.2vw;
+    padding: 1vw 3.5vw;
+}
+
+.hero>p{
+    font-size: 1.7vw;
+}
+
+#secondhand-headline {
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+.vis-flere {
+    align-items: center;
+}
+
+.arrow {
+    width: 2.5vw;
+}
+
+.vis-flere>a {
+    font-size: 1.5vw;
+}
+
+
+.books>a>img {
+    width: 18vw;
+    height: 29vw;
+}
+
+.books{
+    gap: 2vw;
+}
+
+.harry-books{
+    flex-direction: row;
+    margin-bottom: 5vw;
+}
+
+.book-of-the-month {
+    margin: 5vw 10vw;
+    width: 25vw;
+}
+
+.book-of-the-month>p {
+    margin-top: 2vw;
+    font-size: 1.1vw;
+}
+
+.book-of-the-month>a {
+    margin-top: 3.5vw;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.book-of-the-month>h2 {
+    font-size: 2vw;
+}
+
+.harry-potter{
+    padding: 5vw 10vw;
+}
+
+.harry-potter>img {
+    width: 18vw;
+    height: 29vw;
+    box-shadow: var(--shadow);
+    margin-right: 5vw;
+}
+
+.harry-text>h2 {
+    font-size: 2.1vw;
+}
+
+.gray-text {
+    font-size: 1vw;
+}
+
+.black-text{
+    font-size: 1.2vw;
+}
+
+.harry-text{
+    font-size: 1.1vw;
+}
+
+.harry-text>a{
+    font-size: 1.1vw;
+    padding: 1vw 4vw;
+    margin-top: 3vw;
+    margin-left: -0.5vw;
+}
+
+
+.bookclub{
+    background-position: center;
+    height: 40vw;
+    margin-bottom: 5vw;
+}
+
+.bookclub>a{
+    font-size: 1.2vw;
+    padding: 1.2vw 3.5vw;
+    margin-top: 0vw;
+}
+
+
+footer{
+    flex-direction: row;
+    height: 30vw;
+    justify-content: space-between;
+}
+
+footer>article{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 3vw 10vw;
+}
+
+.logo2{
+    font-size: 2vw;
+    margin: 1.5vw 0vw 0.3vw 0vw;
+}
+
+footer>article>div>h3{
+    font-size: 1.5vw;
+    margin: 1.5vw 0vw 0.3vw 0vw;
+}
+
+footer>article>div{
+    flex-grow: 1;
+    width: 23vw;
+}
+
+.icons>a>svg{
+    width: 5vw;
+}
+
+.media{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer>article>div>li{
+    font-size: 1.5vw;
+}
+
+footer>img{
+    width: 33vw;
+}
+}
